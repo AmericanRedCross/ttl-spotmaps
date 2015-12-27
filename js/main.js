@@ -18,7 +18,7 @@ var markers = L.markerClusterGroup({
       // console.log(cluster.getAllChildMarkers()[0]);
       return new L.DivIcon(L.extend({
         className: 'leaflet-marker-photo',
-        html: '<div style="background-image: url(/images/maps/' +
+        html: '<div style="background-image: url(images/maps/' +
         // randomly selects one of the thumbnails from the child markers
         cluster.getAllChildMarkers()[Math.floor(Math.random()*cluster.getAllChildMarkers().length)].feature.properties.filename +
         '_thumb.jpg);"></div>​<b>' + cluster.getChildCount() + '</b>'
