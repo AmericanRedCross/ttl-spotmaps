@@ -82,9 +82,9 @@ function mapData(){
     pointToLayer: function (feature, latlng) {
       return L.marker(latlng, {
         icon: L.divIcon(L.extend({
-          html: '<div style="background-image: url(/images/maps/' +
+          html: '<div style="background-image: url(images/maps/' +
            feature.properties.filename +
-           '_thumb.jpg);"><a class="image-link" href="#" data-lightbox="/images/maps/'+
+           '_thumb.jpg);"><a class="image-link" href="#" data-lightbox="images/maps/'+
            feature.properties.filename + '.jpg" ></a></div>​',
           className: 'leaflet-marker-photo',
           iconSize: [40, 40]
@@ -126,7 +126,7 @@ function clearName(e) {
 
 function markerClick(e){
   // console.log(e.target.feature.properties)
-  image = "/images/maps/" + e.target.feature.properties.filename + ".jpg";
+  image = "images/maps/" + e.target.feature.properties.filename + ".jpg";
   configuration = {
     afterOpen: function(event){
       h = $(window).height() * 0.80;
