@@ -72,7 +72,7 @@ function getData(){
       };
       dataGeoJson.features.push(thisGeoJsonObject);
     });
-
+    buildSearchBox(rows);
     mapData();
   });
 }
@@ -108,8 +108,51 @@ function mapData(){
   mapBounds = markers.getBounds();
   map.fitBounds(mapBounds);
 
+  buildSearchBox();
+
 }
 
+// Search box
+// ==========
+function buildSearchBox(data) {
+  // constructs the suggestion engine
+  var barangays = new Bloodhound({
+    datumTokenizer: Bloodhound.tokenizers.obj.whitespace('brgy' , 'municip'),
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+    local: data
+  });
+
+  // kicks off the loading/processing of `local`
+  barangays.initialize();
+
+  $('#search-box .typeahead').typeahead({
+    // hint: true,
+    highlight: true,
+    minLength: 1
+  },
+  {
+    name: 'barangays',
+    displayKey: Handlebars.compile('{{brgy}}'),
+    source: barangays.ttAdapter(),
+    templates: {
+      empty:[
+        '<div class="empty-message">',
+        '<small><i>Unable to find a matching name</i></small>',
+        '</div>'
+      ].join('\n'),
+      suggestion: Handlebars.compile('<p>{{brgy}}, {{municip}}</p>')
+    }
+  }).on('typeahead:selected', function (eventObj, datum) {
+    selectedBarangay(datum);
+  });
+}
+
+function selectedBarangay(datum) {
+  $('#search-box .typeahead').typeahead('val', '');
+  var center = L.latLng(datum.lat, datum.lng);
+  map.setView(center, 15);
+  openModal(datum);
+}
 
 // HELPER FUNCTIONS //
 // ################ //
@@ -126,13 +169,16 @@ function clearName(e) {
   $('#tooltip').empty();
 }
 
-function markerClick(e){
+function markerClick(e) {
   // console.log(e.target.feature.properties)
-  var title = e.target.feature.properties.brgy + ", " + e.target.feature.properties.municip;
+  openModal(e.target.feature.properties);
+}
+function openModal(barangay) {
+  var title = barangay.brgy + ", " + barangay.municip;
   var h = $(window).height() * 0.70;
-  var src = "images/maps/" + e.target.feature.properties.filename + ".jpg";
-  var alt = e.target.feature.properties.filename;
-  var pdf = "images/maps/" + e.target.feature.properties.filename + ".pdf";
+  var src = "images/maps/" + barangay.filename + ".jpg";
+  var alt = barangay.filename;
+  var pdf = "images/maps/" + barangay.filename + ".pdf";
 
   $('#image-modal .modal-title').html(title);
   $('#image-modal .modal-body img').css('max-height', h);
