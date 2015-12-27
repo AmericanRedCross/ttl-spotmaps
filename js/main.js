@@ -55,7 +55,7 @@ map.addControl(new extentControl());
 
 // FUNCTION CHAIN TO BUILD PAGE
 function getData(){
-  d3.csv('/data/points.csv', function(rows){
+  d3.csv('data/points.csv', function(rows){
     $(rows).each(function(index, row){
       var latlng = [parseFloat(row.lng), parseFloat(row.lat)];
       var thisGeoJsonObject = {
