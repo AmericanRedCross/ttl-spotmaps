@@ -1,0 +1,87 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin:0px;
+}
+#map {
+  width: 100%;
+  height: 100%;
+}
+#logo-bar img {
+  margin: 6px;
+  height: 60px;
+  display:inline-block;
+}
+#logo-bar {
+  background: #fcfcfc;
+}
+#map-title {
+  vertical-align: middle;
+  display: inline-block;
+}
+.noPadding {
+  padding: 0px;
+}
+#map-wrapper {
+  position: relative;
+}
+.image-link {
+  width:100%;
+  height:100%;
+}
+.leaflet-control-zoom-extent:focus span {
+  color: black;
+}
+.leaflet-control-attribution {
+  font-size: x-small;
+  color: #78787d;
+}
+.leaflet-control-attribution a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #6d6e70;
+}
+#tooltip {
+    position:absolute;
+    z-index:999;
+    font-size:14px;
+    color: #1a1a1a;
+    background-color: rgba(245,245,245,1);
+    border-radius: 3px;
+    padding: 2px;
+}
+#tooltip:empty {
+    display:none;
+}
+
+
+/* Leaflet.Photo.css */
+/* ################# */
+.leaflet-marker-photo {
+	border: 2px solid #f5f5f5;
+	box-shadow: 3px 3px 10px #888;
+}
+
+.leaflet-marker-photo div {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.leaflet-marker-photo b {
+	position: absolute;
+	top: -7px;
+	right: -11px;
+	color: #555;
+  font-size: 16px;
+	background-color: #fff;
+	border-radius: 10px;
+	height: 18px;
+	min-width: 18px;
+	line-height: 18px;
+	text-align: center;
+	/*padding: 2px;*/
+	box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+}
