@@ -1,5 +1,5 @@
 // SETUP MAP
-var height = $(window).height() - $('#logo-bar').height();
+var height = $(window).height();
 $('#map').height(height);
 
 var map = L.map('map').setView([51.505, -0.09], 13);

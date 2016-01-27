@@ -56,6 +56,9 @@ html, body {
 
 /* SEARCH BOX */
 /* ########## */
+#search-box h3 {
+  margin-top: 0;
+}
 #search-box {
   position: absolute;
   left: 47px;
