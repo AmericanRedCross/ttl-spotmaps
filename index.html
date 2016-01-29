@@ -32,15 +32,31 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title">Modal title</h4>
       </div>
-      <div class="modal-body">
-        <img src="" class="img-responsive center-block" alt="">
+      <div class="modal-body ">
+        <div class="row">
+          <div id="preview-spot" class="col-xs-6">
+            <img src="" class="img-responsive" style="margin-bottom:6px;" alt="">
+          </div>
+          <div id="preview-cap" class="col-xs-6">
+            <img src="" class="img-responsive" style="margin-bottom:6px; border:1px solid #9F9FA3;" alt="">
+          </div>
+        </div>
+        <div class="row">
+          <div id="dl-spot" class="col-xs-6">
+            <a class="btn btn-default btn-sm pdf-download" href="" target="_blank" download>
+              <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> &nbsp; Barangay SPOT map PDF
+            </a>
+          </div>
+          <div id="dl-cap" class="col-xs-6">
+            <a class="btn btn-default btn-sm pdf-download" href="" target="_blank" download>
+              <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> &nbsp; Community Action Plan PDF
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="modal-footer">
-        <a class="btn btn-default btn-sm pdf-download" href="" target="_blank" download>
-          <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Download PDF
-        </a>
+      <!-- <div class="modal-footer">
         <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
-      </div>
+      </div> -->
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->

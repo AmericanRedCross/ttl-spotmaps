@@ -1,23 +1,23 @@
-municip,brgy,barangay_id,lng,lat,filename
-Alang Alang,Aslum,101,124.8855507,11.1688658,CommunityMap_Alang-Alang_Aslum_Spot
-Alang Alang,Astorga,102,124.8592758,11.15417164,CommunityMap_Alang-Alang_Astorga_Spot
-Alang Alang,Hubang,103,124.8427749,11.23291775,CommunityMap_Alang-Alang_Hubang_CAD
-Alang Alang,Penalosa,104,124.8534822,11.16991836,CommunityMap_Alang-Alang_Penalosa_Spot
-Alang Alang,Santiago,105,124.8091078,11.19900966,CommunityMap_Alang-Alang_Santiago_Spot
-McArthur,Burabod,106,124.9362659,10.83908055,CommunityMap_Macarthur_Burabod_CAD
-McArthur,Danao,107,124.9689674,10.80649706,CommunityMap_Macarthur_Danao_CAD
-McArthur,Kiling,108,124.9121475,10.82951241,CommunityMap_Macarthur_Kiling_Spot
-McArthur,Lanawan,109,124.859587,10.85667753,CommunityMap_Macarthur_Lanawan_CAD
-McArthur,Oguisan,110,124.8630738,10.82329507,CommunityMap_Macarthur_Oguisan_CAD
-McArthur,San Antonio,111,124.8922348,10.82767884,CommunityMap_Macarthur_San-Antonio_Spot
-McArthur,San Isidro,112,124.9916267,10.8351606,CommunityMap_Macarthur_San-Isidro_CAD
-McArthur,Sta. Isabel,113,124.8935008,10.8314092,CommunityMap_Macarthur_Sta-Isabel_CAD
-McArthur,Villa Imelda,114,124.9729586,10.79359757,CommunityMap_Macarthur_Villa-Imelda_Spot
-Mayorga,Burgos,115,124.9844599,10.88266016,CommunityMap_Mayorga_Burgos_CAD
-Mayorga,San Roque,116,125.0097799,10.89113089,CommunityMap_Mayorga_San-Roque_CAD
-Mayorga,Talisay,117,124.9766707,10.91845895,CommunityMap_Mayorga_Talisay_CAD
-Mayorga,Union,118,124.9950171,10.85695149,CommunityMap_Mayorga_Union_CAD
-Mayorga,Wilson,119,124.9657488,10.8515566,CommunityMap_Mayorga_Wilson_CAD
-Tacloban,Marasbaras 79,120,125.0105524,11.20335627,CommunityMap_Tacloban_Marasbaras_Spot
-Tacloban,Palanog 37A,122,124.9538398,11.25552093,CommunityMap_Tacloban_Palanog_Spot
-Tacloban,San Paglaum 103A,124,124.9208808,11.25830938,CommunityMap_Tacloban_Paglaum_Spot
+municip,brgy,barangay_id,lng,lat,spot,cap
+Alang Alang,Aslum,101,124.8855507,11.1688658,CommunityMap_Alang-Alang_Aslum_Spot,CAP-AlangAlang_Aslum
+Alang Alang,Astorga,102,124.8592758,11.15417164,CommunityMap_Alang-Alang_Astorga_Spot,CAP-AlangAlang_Astorga
+Alang Alang,Hubang,103,124.8427749,11.23291775,CommunityMap_Alang-Alang_Hubang_CAD,CAP-AlangAlang_Hubang
+Alang Alang,Penalosa,104,124.8534822,11.16991836,CommunityMap_Alang-Alang_Penalosa_Spot,CAP-AlangAlang_Penalosa
+Alang Alang,Santiago,105,124.8091078,11.19900966,CommunityMap_Alang-Alang_Santiago_Spot,CAP-AlangAlang_Santiago
+McArthur,Burabod,106,124.9362659,10.83908055,CommunityMap_Macarthur_Burabod_CAD,CAP-Macarthur_Burabod
+McArthur,Danao,107,124.9689674,10.80649706,CommunityMap_Macarthur_Danao_CAD,CAP-Macarthur_Danao
+McArthur,Kiling,108,124.9121475,10.82951241,CommunityMap_Macarthur_Kiling_Spot,CAP-Macarthur_Kiling
+McArthur,Lanawan,109,124.859587,10.85667753,CommunityMap_Macarthur_Lanawan_CAD,CAP-Macarthur_Lanawan
+McArthur,Oguisan,110,124.8630738,10.82329507,CommunityMap_Macarthur_Oguisan_CAD,CAP-Macarthur_Oguisan
+McArthur,San Antonio,111,124.8922348,10.82767884,CommunityMap_Macarthur_San-Antonio_Spot,CAP-Macarthur_SanAntonio
+McArthur,San Isidro,112,124.9916267,10.8351606,CommunityMap_Macarthur_San-Isidro_CAD,CAP-Macarthur_SanIsidro
+McArthur,Sta. Isabel,113,124.8935008,10.8314092,CommunityMap_Macarthur_Sta-Isabel_CAD,CAP-Macarthur_StaIsabel
+McArthur,Villa Imelda,114,124.9729586,10.79359757,CommunityMap_Macarthur_Villa-Imelda_Spot,CAP-Macarthur_VillaImelda
+Mayorga,Burgos,115,124.9844599,10.88266016,CommunityMap_Mayorga_Burgos_CAD,CAP-Mayorga_Burgos
+Mayorga,San Roque,116,125.0097799,10.89113089,CommunityMap_Mayorga_San-Roque_CAD,null
+Mayorga,Talisay,117,124.9766707,10.91845895,CommunityMap_Mayorga_Talisay_CAD,null
+Mayorga,Union,118,124.9950171,10.85695149,CommunityMap_Mayorga_Union_CAD,CAP-Mayorga_Union
+Mayorga,Wilson,119,124.9657488,10.8515566,CommunityMap_Mayorga_Wilson_CAD,CAP-Mayorga_Wilson
+Tacloban,Marasbaras 79,120,125.0105524,11.20335627,CommunityMap_Tacloban_Marasbaras_Spot,CAP-Tacloban_Marasbaras
+Tacloban,Palanog 37A,122,124.9538398,11.25552093,CommunityMap_Tacloban_Palanog_Spot,CAP-Tacloban_Palanog
+Tacloban,San Paglaum 103A,124,124.9208808,11.25830938,CommunityMap_Tacloban_Paglaum_Spot,CAP-Tacloban_Paglaum

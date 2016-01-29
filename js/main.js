@@ -20,7 +20,7 @@ var markers = L.markerClusterGroup({
         className: 'leaflet-marker-photo',
         html: '<div style="background-image: url(images/maps/' +
         // randomly selects one of the thumbnails from the child markers
-        cluster.getAllChildMarkers()[Math.floor(Math.random()*cluster.getAllChildMarkers().length)].feature.properties.filename +
+        cluster.getAllChildMarkers()[Math.floor(Math.random()*cluster.getAllChildMarkers().length)].feature.properties.spot +
         '_thumb.jpg);"></div>​<b>' + cluster.getChildCount() + '</b>'
       }, this.icon));
       },
@@ -63,7 +63,8 @@ function getData(){
         "properties": {
           "municip": row.municip,
           "brgy": row.brgy,
-          "filename": row.filename
+          "spot": row.spot,
+          "cap": row.cap,
         },
         "geometry": {
           "type": "Point",
@@ -83,10 +84,10 @@ function mapData(){
       return L.marker(latlng, {
         icon: L.divIcon(L.extend({
           html: '<div style="background-image: url(images/maps/' +
-           feature.properties.filename +
+           feature.properties.spot +
            '_thumb.jpg);">'+
           //  '<a class="image-link" href="#" data-lightbox="images/maps/'+
-          //  feature.properties.filename + '.jpg" ></a>'+
+          //  feature.properties.spot + '.jpg" ></a>'+
            '</div>​',
           className: 'leaflet-marker-photo',
           iconSize: [40, 40]
@@ -176,18 +177,33 @@ function markerClick(e) {
 function openModal(barangay) {
   var title = barangay.brgy + ", " + barangay.municip;
   var h = $(window).height() * 0.70;
-  var src = "images/maps/" + barangay.filename + ".jpg";
-  var alt = barangay.filename;
-  var pdf = "images/maps/" + barangay.filename + ".pdf";
+  var spotsrc = "images/maps/" + barangay.spot + ".jpg";
+  var spotpdf = "images/maps/" + barangay.spot + ".pdf";
+  var capsrc = "pdf/" + barangay.cap + ".jpg";
+  var cappdf = "pdf/" + barangay.cap + ".pdf";
+  var alt = barangay.spot;
 
   $('#image-modal .modal-title').html(title);
-  $('#image-modal .modal-body img').css('max-height', h);
-  $('#image-modal .modal-body img').attr('src', src);
-  $('#image-modal .modal-body img').attr('alt', alt);
-  $('#image-modal .pdf-download').attr('href', pdf);
+  $('#preview-spot img').css('max-height', h);
+  $('#preview-spot img').attr('src', spotsrc);
+  $('#preview-spot img').attr('alt', alt);
+  $('#dl-spot .pdf-download').attr('href', spotpdf);
+  $('#preview-cap img').css('max-height', h);
+  $('#preview-cap img').attr('src', capsrc);
+  $('#preview-cap img').attr('alt', alt);
+  $('#dl-cap .pdf-download').attr('href', cappdf);
+
+  if(barangay.cap === "null") {
+    $('#preview-cap').hide();
+    $('#dl-cap').hide();
+  } else {
+    $('#preview-cap').show();
+    $('#dl-cap').show();
+  }
 
   $('#image-modal').modal('show')
 }
+
 
 // on window resize
 $(window).resize(function(){
