@@ -175,31 +175,42 @@ function markerClick(e) {
   openModal(e.target.feature.properties);
 }
 function openModal(barangay) {
-  var title = barangay.brgy + ", " + barangay.municip;
+  // var title = barangay.brgy + ", " + barangay.municip;
   var h = $(window).height() * 0.70;
+
   var spotsrc = "images/maps/" + barangay.spot + ".jpg";
-  var spotpdf = "images/maps/" + barangay.spot + ".pdf";
-  var capsrc = "pdf/" + barangay.cap + ".jpg";
+  var visionsrc = "images/maps/" + barangay.spot + ".jpg";
+
+  var prapdf = "pdf/" + barangay.cap + ".pdf";
   var cappdf = "pdf/" + barangay.cap + ".pdf";
+  var wppdf = "pdf/" + barangay.cap + ".pdf";
+  var drrpdf = "pdf/" + barangay.cap + ".pdf";
+
   var alt = barangay.spot;
 
-  $('#image-modal .modal-title').html(title);
-  $('#preview-spot img').css('max-height', h);
-  $('#preview-spot img').attr('src', spotsrc);
-  $('#preview-spot img').attr('alt', alt);
-  $('#dl-spot .pdf-download').attr('href', spotpdf);
-  $('#preview-cap img').css('max-height', h);
-  $('#preview-cap img').attr('src', capsrc);
-  $('#preview-cap img').attr('alt', alt);
-  $('#dl-cap .pdf-download').attr('href', cappdf);
+  $('#spot-map img').css('max-height', h);
+  $('#spot-map img').attr('src', spotsrc);
+  $('#spot-map img').attr('alt', alt);
 
-  if(barangay.cap === "null") {
-    $('#preview-cap').hide();
-    $('#dl-cap').hide();
-  } else {
-    $('#preview-cap').show();
-    $('#dl-cap').show();
-  }
+  $('#vision-map img').css('max-height', h);
+  $('#vision-map img').attr('src', visionsrc);
+  $('#vision-map img').attr('alt', alt);
+
+  $('#brgy').html(barangay.brgy);
+  $('#municipality').html(barangay.municip);
+
+  $('#dl-cap .pdf-download').attr('href', spotpdf);
+  $('#dl-pra .pdf-download').attr('href', prapdf);
+  $('#dl-wp .pdf-download').attr('href', wppdf);
+  $('#dl-drr .pdf-download').attr('href', drrpdf);
+
+  // if(barangay.cap === "null") {
+  //   $('#preview-cap').hide();
+  //   $('#dl-cap').hide();
+  // } else {
+  //   $('#preview-cap').show();
+  //   $('#dl-cap').show();
+  // }
 
   $('#image-modal').modal('show')
 }

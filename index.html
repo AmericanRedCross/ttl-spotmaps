@@ -28,29 +28,37 @@
 <div id="image-modal" class="modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <div class="modal-header">
+      <!-- <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title">Modal title</h4>
-      </div>
-      <div class="modal-body ">
-        <div class="row">
-          <div id="preview-spot" class="col-xs-6">
+      </div> -->
+      <div class="modal-body">
+        <div class="column col-md-9">
+          <div id="spot-map">
             <img src="" class="img-responsive" style="margin-bottom:6px;" alt="">
           </div>
-          <div id="preview-cap" class="col-xs-6">
+          <div id="vision-map">
             <img src="" class="img-responsive" style="margin-bottom:6px; border:1px solid #9F9FA3;" alt="">
           </div>
         </div>
-        <div class="row">
-          <div id="dl-spot" class="col-xs-6">
-            <a class="btn btn-default btn-sm pdf-download" href="" target="_blank" download>
-              <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> &nbsp; Barangay SPOT map PDF
-            </a>
+        <div class="column col-md-3">
+          <div id="brgy-info" class="col-md-12">
+            <h4 id="brgy"></h4>
+            <h3 id="municipality"></h4>
           </div>
-          <div id="dl-cap" class="col-xs-6">
-            <a class="btn btn-default btn-sm pdf-download" href="" target="_blank" download>
-              <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> &nbsp; Community Action Plan PDF
-            </a>
+          <div id="brgy docs" class="col-md-12">
+            <div id="dl-cap"><a class="btn btn-default btn-sm pdf-download" href="" target="_blank" download>
+                <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> &nbsp; Community Action Plan
+            </a></div>
+            <div id="dl-pra"><a class="btn btn-default btn-sm pdf-download" href="" target="_blank" download>
+              <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> &nbsp; Community PRA Tools
+            </a></div>
+            <div id="dl-wp"><a class="btn btn-default btn-sm pdf-download" href="" target="_blank" download>
+              <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> &nbsp; Community Work Plan
+            </a></div>
+            <div id="dl-drr"><a class="btn btn-default btn-sm pdf-download" href="" target="_blank" download>
+              <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> &nbsp; Community DRR Plan
+            </a></div>
           </div>
         </div>
       </div>
