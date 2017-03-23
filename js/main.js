@@ -176,7 +176,7 @@ function markerClick(e) {
 }
 function openModal(barangay) {
   // var title = barangay.brgy + ", " + barangay.municip;
-  var h = $(window).height() * 0.70;
+  var h = $(window).height();
 
   var spotsrc = "images/maps/" + barangay.spot + ".jpg";
   var visionsrc = "images/maps/" + barangay.spot + ".jpg";
@@ -199,7 +199,7 @@ function openModal(barangay) {
   $('#brgy').html(barangay.brgy);
   $('#municipality').html(barangay.municip);
 
-  $('#dl-cap .pdf-download').attr('href', spotpdf);
+  $('#dl-cap .pdf-download').attr('href', cappdf);
   $('#dl-pra .pdf-download').attr('href', prapdf);
   $('#dl-wp .pdf-download').attr('href', wppdf);
   $('#dl-drr .pdf-download').attr('href', drrpdf);
