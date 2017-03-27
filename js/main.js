@@ -175,18 +175,19 @@ function markerClick(e) {
   openModal(e.target.feature.properties);
 }
 function openModal(barangay) {
-  // var title = barangay.brgy + ", " + barangay.municip;
-  var h = $(window).height();
+  var h = $(window).height()*0.40;
 
   var spotsrc = "images/maps/" + barangay.spot + ".jpg";
-  var visionsrc = "images/maps/" + barangay.spot + ".jpg";
+  var visionsrc = "pdf/"+barangay.brgy+"/vision map.jpg";
 
-  var prapdf = "pdf/" + barangay.cap + ".pdf";
-  var cappdf = "pdf/" + barangay.cap + ".pdf";
-  var wppdf = "pdf/" + barangay.cap + ".pdf";
-  var drrpdf = "pdf/" + barangay.cap + ".pdf";
+  var prapdf = "pdf/"+barangay.brgy+"/pra tools.pdf";
+  var cappdf = "pdf/"+barangay.brgy+"/updated cap.pdf";
+  var wppdf = "pdf/"+barangay.brgy+"/workplan.jpg";
+  var drrpdf = "pdf/"+barangay.brgy+"/drr plan.pdf";
 
   var alt = barangay.spot;
+
+  console.log(barangay);
 
   $('#spot-map img').css('max-height', h);
   $('#spot-map img').attr('src', spotsrc);
@@ -196,21 +197,14 @@ function openModal(barangay) {
   $('#vision-map img').attr('src', visionsrc);
   $('#vision-map img').attr('alt', alt);
 
-  $('#brgy').html(barangay.brgy);
-  $('#municipality').html(barangay.municip);
+  $('#location').html(barangay.brgy+", "+barangay.municip);
 
+  $('#dl-spot .pdf-download').attr('drc', spotsrc);
+  $('#dl-vision .pdf-download').attr('href', visionsrc);
   $('#dl-cap .pdf-download').attr('href', cappdf);
   $('#dl-pra .pdf-download').attr('href', prapdf);
   $('#dl-wp .pdf-download').attr('href', wppdf);
   $('#dl-drr .pdf-download').attr('href', drrpdf);
-
-  // if(barangay.cap === "null") {
-  //   $('#preview-cap').hide();
-  //   $('#dl-cap').hide();
-  // } else {
-  //   $('#preview-cap').show();
-  //   $('#dl-cap').show();
-  // }
 
   $('#image-modal').modal('show')
 }
