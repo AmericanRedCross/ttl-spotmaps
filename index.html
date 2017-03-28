@@ -30,28 +30,53 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Modal title</h4>
+        <h2 class="modal-title" id="location"></h2>
       </div>
-      <div class="modal-body ">
+      <div class="modal-body">
         <div class="row">
-          <div id="preview-spot" class="col-xs-6">
+          <div id="spot-map" class="col-xs-6">
+            <h3 style="display:inline">Spot Map</h3>
             <img src="" class="img-responsive" style="margin-bottom:6px;" alt="">
           </div>
-          <div id="preview-cap" class="col-xs-6">
-            <img src="" class="img-responsive" style="margin-bottom:6px; border:1px solid #9F9FA3;" alt="">
+          <div id="vision-map" class="col-xs-6">
+            <h3 style="display:inline">Vision Map</h3>
+            <img src="" class="img-responsive" style="margin-bottom:6px;" alt="">
           </div>
         </div>
         <div class="row">
-          <div id="dl-spot" class="col-xs-6">
-            <a class="btn btn-default btn-sm pdf-download" href="" target="_blank" download>
-              <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> &nbsp; Barangay SPOT map PDF
-            </a>
+          <div id="brgy docs">
+            <h3 class="no-margin col-xs-12"><strong>Community Documents</strong></h3>
+            <div id="dl-spot" class="card col-xs-6">
+              <div class="card-text"><h4 class="col-xs-9">Community Spot Map</h4>
+                <a class="pdf-download col-xs-3" href="" target="_blank" download><h4 class="glyphicon glyphicon-download-alt col-xs-3" aria-hidden="true"></h4></a>
+              </div>
+            </div>
+            <div id="dl-vision" class="col-xs-6">
+              <div class="card-text"><h4 class="col-xs-9">Community Vision Map</h4>
+                <a class="pdf-download col-xs-3" href="" target="_blank" download><h4 class="glyphicon glyphicon-download-alt col-xs-3" aria-hidden="true"></h4></a>
+            </div>
           </div>
-          <div id="dl-cap" class="col-xs-6">
-            <a class="btn btn-default btn-sm pdf-download" href="" target="_blank" download>
-              <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> &nbsp; Community Action Plan PDF
-            </a>
+            <div id="dl-cap" class="card col-xs-6">
+              <div class="card-text"><h4 class="col-xs-9">Community Action Plan</h4>
+                <a class="pdf-download col-xs-3" href="" target="_blank" download><h4 class="glyphicon glyphicon-download-alt col-xs-3" aria-hidden="true"></h4></a>
+              </div>
+            </div>
+            <div id="dl-pra" class="col-xs-6">
+              <div class="card-text"><h4 class="col-xs-9">Community PRA Tools</h4>
+                <a class="pdf-download col-xs-3" href="" target="_blank" download><h4 class="glyphicon glyphicon-download-alt col-xs-3" aria-hidden="true"></h4></a>
+            </div>
           </div>
+          <div id="dl-wp" class="col-xs-6">
+            <div class="card-text"><h4 class="col-xs-9">Community Work Plan</h4>
+              <a class="pdf-download col-xs-3" href="" target="_blank" download><h4 class="glyphicon glyphicon-download-alt col-xs-3" aria-hidden="true"></h4></a>
+            </div>
+          </div>
+          <div id="dl-drr" class="col-xs-6">
+            <div class="card-text"><h4 class="col-xs-9">Community DRR Plan</h4>
+              <a class="pdf-download col-xs-3" href="" target="_blank" download><h4 class="glyphicon glyphicon-download-alt col-xs-3" aria-hidden="true"></h4> </a>
+            </div>
+          </div>
+        </div>
         </div>
       </div>
       <!-- <div class="modal-footer">
