@@ -177,19 +177,17 @@ function markerClick(e) {
 function openModal(barangay) {
   var h = $(window).height()*0.40;
 
-  console.log("hello");
-
   var spotsrc = "images/maps/" + barangay.spot + ".jpg";
   var visionsrc = "pdf/"+barangay.brgy+"/vision map.jpg";
 
-  var spotpdf = "pdf/"+barangay.brgy+"/"+barangay.spot +".pdf";
   var prapdf = "pdf/"+barangay.brgy+"/pra tools.pdf";
   var cappdf = "pdf/"+barangay.brgy+"/updated cap.pdf";
   var wppdf = "pdf/"+barangay.brgy+"/workplan.jpg";
   var drrpdf = "pdf/"+barangay.brgy+"/drr plan.pdf";
-  var bppdf = "pdf/"+barangay.brgy+"/barangay profile.pdf";
 
   var alt = barangay.spot;
+
+  console.log(barangay);
 
   $('#spot-map img').css('max-height', h);
   $('#spot-map img').attr('src', spotsrc);
@@ -201,13 +199,12 @@ function openModal(barangay) {
 
   $('#location').html(barangay.brgy+", "+barangay.municip);
 
-  $('#dl-spot .pdf-download').attr('href', spotsrc);
+  $('#dl-spot .pdf-download').attr('drc', spotsrc);
   $('#dl-vision .pdf-download').attr('href', visionsrc);
   $('#dl-cap .pdf-download').attr('href', cappdf);
   $('#dl-pra .pdf-download').attr('href', prapdf);
   $('#dl-wp .pdf-download').attr('href', wppdf);
   $('#dl-drr .pdf-download').attr('href', drrpdf);
-  $('#dl-bp .pdf-download').attr('href', bppdf);
 
   $('#image-modal').modal('show')
 }
