@@ -180,14 +180,14 @@ function openModal(barangay) {
   var spotsrc = "images/maps/" + barangay.spot + ".jpg";
   var visionsrc = "pdf/"+barangay.brgy+"/vision map.jpg";
 
-  var prapdf = "pdf/"+barangay.brgy+"/pra tools.pdf";
-  var cappdf = "pdf/"+barangay.brgy+"/updated cap.pdf";
-  var wppdf = "pdf/"+barangay.brgy+"/workplan.jpg";
-  var drrpdf = "pdf/"+barangay.brgy+"/drr plan.pdf";
+  var prapdf = "pdf/"+barangay.brgy+"/pra tools.pdf",
+      cappdf = "pdf/"+barangay.brgy+"/updated cap.pdf",
+      wppdf = "pdf/"+barangay.brgy+"/workplan.jpg",
+      drrpdf = "pdf/"+barangay.brgy+"/drr plan.pdf",
+      bppdf = "pdf/"+barangay.brgy+"/barangay profile.pdf";
+
 
   var alt = barangay.spot;
-
-  console.log(barangay);
 
   $('#spot-map img').css('max-height', h);
   $('#spot-map img').attr('src', spotsrc);
@@ -199,12 +199,13 @@ function openModal(barangay) {
 
   $('#location').html(barangay.brgy+", "+barangay.municip);
 
-  $('#dl-spot .pdf-download').attr('drc', spotsrc);
+  $('#dl-spot .pdf-download').attr('href', spotsrc);
   $('#dl-vision .pdf-download').attr('href', visionsrc);
   $('#dl-cap .pdf-download').attr('href', cappdf);
   $('#dl-pra .pdf-download').attr('href', prapdf);
   $('#dl-wp .pdf-download').attr('href', wppdf);
   $('#dl-drr .pdf-download').attr('href', drrpdf);
+  $('#dl-prof .pdf-download').attr('href', bppdf);
 
   $('#image-modal').modal('show')
 }
